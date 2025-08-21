@@ -2,19 +2,24 @@ public class bubbleSort {
 
     public static void bSort(int[] arr){
         int n = arr.length;
-
-        for(int i=0; i<n-1; i++){
-            for(int j=i+1; j<n; j++){
-                if(arr[i] > arr[j]){
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+        int i = n - 1;
+        while(i >= 1){
+            int j = 0;
+            while(j<i){
+                if(arr[j]>arr[j+1]){
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+                else{
+                    j++;
                 }
             }
+            i--;
         }
-
-        for(int i=0; i<n; i++){
-            System.out.println(arr[i]);
+        
+        for(int k=0; k<n; k++){
+            System.out.print(arr[k]+" ");
         }
     } 
     public static void main(String[] args) {
