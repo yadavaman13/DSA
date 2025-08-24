@@ -1,10 +1,13 @@
 public class rotatedBinarySearch {
+
+    //main
     public static void main(String[] args) {
         int[] arr = {4,5,6,7,0,1,2}; 
         int target = 0;
         System.out.println(search(arr, target));
     }
 
+    //search function
     public static int search(int[] arr, int target) {
         int pivot = findPivot(arr);
 
@@ -25,7 +28,7 @@ public class rotatedBinarySearch {
         return binarySearch(arr, target, pivot + 1, arr.length - 1);
     }
 
-    // Correct binary search
+    //binary search
     static int binarySearch(int[] arr, int target, int start, int end) {
         while (start <= end) {
             int mid = start + (end - start) / 2;
@@ -42,7 +45,7 @@ public class rotatedBinarySearch {
         return -1;
     }
 
-    // Find pivot (largest element index)
+    // Find pivot 
     static int findPivot(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
