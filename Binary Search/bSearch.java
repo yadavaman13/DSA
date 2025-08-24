@@ -3,7 +3,6 @@
 public class bSearch{
 
     public static int binarySearch(int[] arr, int target){
-        int n = arr.length;
         int start = 0;
         int end = arr.length - 1;
         int mid = 0;
